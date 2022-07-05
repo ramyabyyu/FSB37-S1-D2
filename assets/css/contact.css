@@ -1,5 +1,6 @@
 :root {
   --border-radius: 0.5rem;
+  --primary-color: #222;
   --secondary-color: slateblue;
 }
 
@@ -12,7 +13,8 @@ button {
 }
 
 input,
-textarea {
+textarea,
+select {
   border: 1px solid lightgrey;
   transition: all 0.5s ease-out;
   border-radius: var(--border-radius);
@@ -23,7 +25,8 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: none;
   border: 1px solid var(--secondary-color);
 }
@@ -79,6 +82,13 @@ textarea:focus {
   font-family: inherit;
 }
 
+.input__group select {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 .input__group .btn__submit {
   border: 1px solid transparent;
   outline: none;
@@ -93,4 +103,38 @@ textarea:focus {
   background: transparent;
   border: 1px solid slateblue;
   color: var(--secondary-color);
+}
+
+/* Nav */
+nav {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: gainsboro;
+  width: 100%;
+  height: 7vh;
+}
+
+.nav__brand a,
+.nav__item a {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.nav__links {
+  display: flex;
+  list-style: none;
+}
+
+.nav__item {
+  margin-right: 3rem;
+  padding: 0.5rem;
+}
+
+.nav__end a {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background: var(--primary-color);
 }

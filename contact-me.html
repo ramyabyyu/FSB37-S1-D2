@@ -13,9 +13,28 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Day 2 | Contact Me</title>
+    <title>Day 2 | Form And Navbar</title>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav__brand">
+        <a href="index.html">
+          <img src="./assets/images/logo.png" alt="logo" />
+        </a>
+      </div>
+      <ul class="nav__links">
+        <li class="nav__item active">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Blog</a>
+        </li>
+      </ul>
+      <div class="nav__end">
+        <a href="./contact-me.html">Contact Me</a>
+      </div>
+    </nav>
     <section class="section__contact" id="contact">
       <div class="form__container">
         <h3>Contact Me</h3>
@@ -33,7 +52,23 @@
               placeholder="Enter your email address"
             />
           </div>
-          <div class="input__group"></div>
+          <div class="input__group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="input__group">
+            <label for="subject">Subject</label>
+            <select name="subject" id="subject">
+              <option value="" disabled selected>Choose Subject</option>
+              <option value="Let's Collaborate">Let's Collaborate</option>
+              <option value="Let's Talk">Let's Talk</option>
+              <option value="Let's Do A Project">Let's Do A Project</option>
+            </select>
+          </div>
           <div class="input__group">
             <label for="message">Your Message</label>
             <textarea name="message" id="message"></textarea>
